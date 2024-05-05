@@ -1,5 +1,5 @@
 {
-    "name": "nubay_services/par_slider",
+    "name": "handmangroup/par_slider",
     "description": "Creates a slider paragraph type",
     "type": "drupal-module",
     "authors": [
