@@ -1,0 +1,18 @@
+{
+    "name": "nubay_services/par_slider",
+    "description": "Creates a slider paragraph type",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "Jill Handman",
+            "email": "jill@handmangroup.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/color_field": "^3.0",
+        "drupal/paragraphs": "^1.15",
+        "drupal/twig_tweak": "^3.2",
+        "drupal/layout_paragraphs": "^2.0"
+    }
+}

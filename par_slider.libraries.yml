@@ -1,0 +1,4 @@
+slider:
+  css:
+    css/carousel.css: {}
+    css/swiper-bundle.min.css: {}

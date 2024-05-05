@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Paragraph columns module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function par_slider_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'par_slider/slider';
+}
+
+
+
+/**
+ * Implements hook_theme().
+ */
+function par_slider_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__paragraph_slider_block' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__paragraph_slider_item' => [
+      'base hook' => 'paragraph',
+    ],
+    'field__field_paragraph_slider_item' => [
+      'base hook' => 'field',
+    ],
+    'field__field_paragraph_slider_block' => [
+      'base hook' => 'field',
+    ],
+    'field__field_paragraph_items' => [
+      'base hook' => 'field',
+    ],
+  ];
+}

@@ -1,0 +1,20 @@
+name: par_slider
+description: Provides a Slider paragraph type
+package: Custom
+type: module
+core_version_requirement: ^9.2 || ^10
+dependencies:
+  - drupal:block
+  - drupal:field
+  - drupal:file
+  - drupal:filter
+  - drupal:image
+  - drupal:link
+  - drupal:options
+  - drupal:system
+  - drupal:text
+  - drupal:user
+  - drupal:views
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs
+  - imce:imce
