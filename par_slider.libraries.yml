@@ -3,3 +3,9 @@ slider:
     theme:
       css/carousel.css: {}
       css/swiper-bundle.min.css: {}
+  js:
+    js/swiper.js: {}
+    js/plugins.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
