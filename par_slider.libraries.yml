@@ -4,6 +4,7 @@ slider:
       css/carousel.css: {}
       css/swiper-bundle.min.css: {}
   js:
+    js/swiper-bundle.min.js: {}
     js/swiper.js: {}
     js/plugins.js: {}
   dependencies:
