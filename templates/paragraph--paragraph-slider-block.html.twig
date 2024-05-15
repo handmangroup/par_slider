@@ -47,7 +47,7 @@
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    <div class="swiper-container jswiper-thumbs-container swiper-fullscreen nav-light dots-over {{ paragraph.field_paragraph_slider_ex_cls.value|render|trim }}"
+    <div class="swiper-container {{ paragraph.field_paragraph_slider_ex_cls.value|render|trim }}"
         {% if paragraph.field_paragraph_data_nav.value|render|trim %} data-nav="true" {% endif %}
         {% if paragraph.field_paragraph_data_dots.value|render|trim %} data-dots="true" {% endif %}
         {% if paragraph.field_paragraph_data_margin %} data-margin="{{ paragraph.field_paragraph_data_margin.value|render|trim }}" {% endif %}
