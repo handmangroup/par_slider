@@ -27,10 +27,10 @@ function par_slider_theme($existing, $type, $theme, $path) {
     'field__field_paragraph_slider_item' => [
       'base hook' => 'field',
     ],
-    'field__field_paragraph_slider_block' => [
+    'field__field_paragraph_swiper_static' => [
       'base hook' => 'field',
     ],
-    'field__field_paragraph_items' => [
+    'field__field_paragraph_slider_items' => [
       'base hook' => 'field',
     ],
   ];
