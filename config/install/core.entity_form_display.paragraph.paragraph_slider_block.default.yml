@@ -1,4 +1,3 @@
-uuid: 8f678319-c969-4f3e-a0a8-6b8d51e34fe2
 langcode: en
 status: true
 dependencies:
@@ -16,14 +15,62 @@ dependencies:
     - field.field.paragraph.paragraph_slider_block.field_paragraph_data_margin
     - field.field.paragraph.paragraph_slider_block.field_paragraph_data_nav
     - field.field.paragraph.paragraph_slider_block.field_paragraph_data_speed
-    - field.field.paragraph.paragraph_slider_block.field_paragraph_slider_ex_cls
     - field.field.paragraph.paragraph_slider_block.field_paragraph_overflow_visible
+    - field.field.paragraph.paragraph_slider_block.field_paragraph_slider_ex_cls
     - field.field.paragraph.paragraph_slider_block.field_paragraph_slider_items
     - field.field.paragraph.paragraph_slider_block.field_paragraph_swiper_static
     - paragraphs.paragraphs_type.paragraph_slider_block
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_slider_details:
+      children:
+        - field_paragraph_data_nav
+        - field_paragraph_data_dots
+        - field_paragraph_data_items_auto
+        - field_paragraph_data_auto_height
+        - field_paragraph_data_speed
+        - field_paragraph_data_margin
+        - field_paragraph_data_items
+        - field_paragraph_data_items_xs
+        - field_paragraph_data_items_sm
+        - field_paragraph_data_items_md
+        - field_paragraph_data_items_lg
+        - field_paragraph_data_items_xl
+        - field_paragraph_data_items_xxl
+        - field_paragraph_overflow_visible
+        - field_paragraph_slider_ex_cls
+      label: 'Slider Details'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_slider_basics:
+      children:
+        - field_paragraph_slider_items
+        - field_paragraph_swiper_static
+      label: 'Slider Basics'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 _core:
   default_config_hash: yiVcfC2H2_I3tyL7-4GSLki18zid7QiVLGypjbERf8Q
 id: paragraph.paragraph_slider_block.default
@@ -33,70 +80,70 @@ mode: default
 content:
   field_paragraph_data_auto_height:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_paragraph_data_dots:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_paragraph_data_items:
     type: number
-    weight: 6
+    weight: 9
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_auto:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_paragraph_data_items_lg:
     type: number
-    weight: 12
+    weight: 13
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_md:
     type: number
-    weight: 11
+    weight: 12
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_sm:
     type: number
-    weight: 10
+    weight: 11
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_xl:
     type: number
-    weight: 13
+    weight: 14
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_xs:
     type: number
-    weight: 9
+    weight: 10
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_paragraph_data_items_xxl:
     type: number
-    weight: 14
+    weight: 15
     region: content
     settings:
       placeholder: ''
@@ -110,7 +157,7 @@ content:
     third_party_settings: {  }
   field_paragraph_data_nav:
     type: boolean_checkbox
-    weight: 2
+    weight: 3
     region: content
     settings:
       display_label: true
@@ -122,9 +169,16 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  field_paragraph_overflow_visible:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_paragraph_slider_ex_cls:
     type: string_textfield
-    weight: 0
+    weight: 17
     region: content
     settings:
       size: 60
@@ -132,7 +186,7 @@ content:
     third_party_settings: {  }
   field_paragraph_slider_items:
     type: paragraphs
-    weight: 15
+    weight: 2
     region: content
     settings:
       title: Paragraph
@@ -148,16 +202,9 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-  field_paragraph_overflow_visible:
-    type: boolean_checkbox
-    weight: 1
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_paragraph_swiper_static:
     type: text_textarea
-    weight: 16
+    weight: 3
     region: content
     settings:
       rows: 5
@@ -165,5 +212,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_paragraph_slider_items: true
   status: true
