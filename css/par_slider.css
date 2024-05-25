@@ -1775,3 +1775,7 @@ button.swiper-pagination-bullet {
 .swiper-container > div.swiper-controls:nth-child(2) {
     display: block;
 }
+
+.swiper-static + div.swiper-controls {
+    display: block;
+}
