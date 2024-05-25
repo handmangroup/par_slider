@@ -606,11 +606,13 @@
   touch-action: pan-x
 }
 .swiper-slide {
-  flex-shrink: 0;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  transition-property: transform
+    flex-shrink: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transition-property: transform;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden

@@ -54,9 +54,8 @@
 <div{{ attributes.addClass(classes) }} {% if paragraph.field_paragraph_set_bg.value|render|trim %} data-image-src="{{ img_url }}" {% endif %}>
   {% if paragraph.field_paragraph_slider_content.value|render|trim %}
     {{ content|without('field_paragraph_slider_ex_cls','field_paragraph_slider_image','field_paragraph_set_bg') }}
-      {% else %}
-    {% if img_url != '/' and paragraph.field_paragraph_set_bg.value|render|trim == '0' %}
-       <img alt="image" src="{{ img_url }}" />
-    {% endif %}
+  {% endif %}
+    {% if paragraph.field_paragraph_set_bg.value|render|trim == "0" %}
+      <img alt="image" src="{{ img_url }}" />
   {% endif %}
 </div>
