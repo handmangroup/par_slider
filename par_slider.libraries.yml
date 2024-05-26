@@ -2,9 +2,10 @@ slider:
   css:
     theme:
       css/par_slider.css: {}
+      css/swiper-bundle.min.css: {}
   js:
-    js/par_plugins.js: {}
     js/par_swiper.js: {}
+    js/swiper-bundle.min.js: {}
   dependencies:
     - core/jquery
     - core/drupalSettings

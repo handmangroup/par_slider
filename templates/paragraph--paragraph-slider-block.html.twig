@@ -51,7 +51,7 @@
         {% if paragraph.field_paragraph_data_nav.value|render|trim %} data-nav="true" {% endif %}
         {% if paragraph.field_paragraph_data_dots.value|render|trim %} data-dots="true" {% endif %}
         {% if paragraph.field_paragraph_data_margin %} data-margin="{{ paragraph.field_paragraph_data_margin.value|render|trim }}" {% endif %}
-        {% if paragraph.field_paragraph_data_auto_height.value|render|trim %} data-autoheight="true" {% endif %}
+        {% if paragraph.field_paragraph_data_auto_height.value|render|trim %} data-autoheight="true"{% else %} data-autoheight="false" {% endif %}
         {% if paragraph.field_paragraph_data_items_auto.value|render|trim %} data-items-auto="true" {% endif %}
         {% if paragraph.field_paragraph_data_items.value|render|trim %} data-items="{{ paragraph.field_paragraph_data_items.value|render|trim }}" {% endif %}
         {% if paragraph.field_paragraph_data_items_xs.value|render|trim %} data-items-xs="{{ paragraph.field_paragraph_data_items_xs.value|render|trim }}" {% endif %}
@@ -61,11 +61,11 @@
         {% if paragraph.field_paragraph_data_items_xl.value|render|trim %} data-items-xl="{{ paragraph.field_paragraph_data_items_xl.value|render|trim }}" {% endif %}
         {% if paragraph.field_paragraph_data_items_xxl.value|render|trim %} data-items-xxl="{{ paragraph.field_paragraph_data_items_xxl.value|render|trim }}" {% endif %}
     >
-      <div class="swiper {% if paragraph.field_paragraph_overflow_visible.value|render|trim %} overflow-visible {% endif %} ">
+{#      <div class="swiper {% if paragraph.field_paragraph_overflow_visible.value|render|trim %} overflow-visible {% endif %} ">#}
         <div class="swiper-wrapper">
           {{ content.field_paragraph_slider_items }}
         </div>
-      </div>
+{#      </div>#}
       {% if paragraph.field_paragraph_swiper_static.value|render|trim %}
         <div class="swiper-static">
           {{ content.field_paragraph_swiper_static }}

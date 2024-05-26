@@ -1,9 +1,8 @@
-(function ($, Drupal) {
 
-    'use strict';
 
-    Drupal.behaviors.swiper = {
-        attach: function (context, settings) {
+  jQuery(document).ready(function () {
+
+
 
             var carousel = document.querySelectorAll('.swiper-container');
             for(var i = 0; i < carousel.length; i++) {
@@ -56,7 +55,7 @@
                         1400: {
                             slidesPerView: Number(sliderItemsXxl)
                         }
-                    }
+                    };
                 }
                 var sliderSpeed = slider1.getAttribute('data-speed') ? slider1.getAttribute('data-speed') : 500;
                 var sliderAutoPlay = slider1.getAttribute('data-autoplay') !== 'false';
@@ -88,39 +87,18 @@
                 } else {
                     var thumbsInit = null;
                 }
-                var slider = new Swiper(swiper, {
-                    on: {
-                        beforeInit: function() {
-                            if(slider1.getAttribute('data-nav') !== 'true' && slider1.getAttribute('data-dots') !== 'true') {
-                                controls.remove();
-                            }
-                            if(slider1.getAttribute('data-dots') !== 'true') {
-                                pagi.remove();
-                            }
-                            if(slider1.getAttribute('data-nav') !== 'true') {
-                                navi.remove();
-                            }
-                        },
-                        init: function() {
-                            if(slider1.getAttribute('data-autoplay') !== 'true') {
-                                this.autoplay.stop();
-                            }
-                          if (controls > 1) {
-                            controls.remove();
-                          }
-                            this.update();
-                        }
-                    },
+                var slider = new Swiper('.swiper-container', {
+                    direction: 'horizontal',
                     autoplay: {
-                        delay: sliderAutoPlayTime,
+                        delay: sliderSpeed,
                         disableOnInteraction: false,
                         reverseDirection: sliderReverseDirection,
                         pauseOnMouseEnter: false
                     },
                     allowTouchMove: sliderAllowTouchMove,
                     speed: parseInt(sliderSpeed),
-                    slidesPerView: slidesPerViewInit,
-                    loop: sliderLoop,
+                    slidesPerView: 1,
+                    loop: true,
                     centeredSlides: sliderCentered,
                     spaceBetween: Number(sliderMargin),
                     effect: sliderEffect,
@@ -141,18 +119,52 @@
                     preventClicksPropagation: false,
                     thumbs: {
                         swiper: thumbsInit,
-                    },
+                    }
                 });
-            }
-        }
-    };
+                  if(slider1.getAttribute('data-nav') !== 'true' && slider1.getAttribute('data-dots') !== 'true') {
+                controls.remove();
+              }
+              if(slider1.getAttribute('data-dots') !== 'true') {
+                pagi.remove();
+              }
+              if(slider1.getAttribute('data-nav') !== 'true') {
+                navi.remove();
+              }
 
-  Drupal.behaviors.bgImage = {
+              if(slider1.getAttribute('data-autoplay') !== 'true') {
+                slider.autoplay.stop();
+              }
+            }
+
+
+          /*var slider = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable:true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+              delay: 1000,
+            },
+          });*/
+
+
+  });
+
+  /*(function ($, Drupal) {
+
+    'use strict';
+Drupal.behaviors.bgImage = {
     attach: function (context, settings) {
-      /**
+      /!**
        * Background Image
        * Adds a background image link via data attribute "data-image-src"
-       */
+       *!/
 
         var bg = document.querySelectorAll(".bg-image");
         for(var i = 0; i < bg.length; i++) {
@@ -160,10 +172,10 @@
           bg[i].style.backgroundImage = "url('" + url + "')";
         }
 
-        /**
+        /!**
          * Background Image Mobile
          * Adds .mobile class to background images on mobile devices for styling purposes
-         */
+         *!/
 
         var isMobile = (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i)) ? true : false;
         if(isMobile) {
@@ -172,10 +184,10 @@
           })
         }
 
-        /**
+        /!**
          * Image Hover Overlay
          * Adds span.bg inside .overlay for simpler markup and styling purposes
-         */
+         *!/
 
         var overlay = document.querySelectorAll('.overlay > a, .overlay > span');
         for(var i = 0; i < overlay.length; i++) {
@@ -187,4 +199,4 @@
   };
 
 
-})(jQuery, Drupal);
+})(jQuery, Drupal);*/
