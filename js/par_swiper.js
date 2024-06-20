@@ -130,7 +130,7 @@ jQuery(document).ready(function () {
       navi.remove();
     }
 
-    if(slider1.getAttribute('data-autoplay') === 'false') {
+    if(slider1.getAttribute('data-autoplay') !== 'true') {
       slider.autoplay.stop();
     }
   }
